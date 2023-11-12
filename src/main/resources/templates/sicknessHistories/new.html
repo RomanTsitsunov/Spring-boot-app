@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма добавления новой истории болезней</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/sicknessHistories}" th:object="${sicknessHistories}">
+    <label for="sickname">Введите название болезни: </label>
+    <input type="text" th:field="*{sickname}" id="sickname">
+    <br>
+    <label for="detectDate">Введите дату обнаружения: </label>
+    <input type="text" th:field="*{detectDate}" id="detectDate">
+    <br>
+    <input type="submit" value="Добавить"/>
+    <br>
+    <a href="/sicknessHistories">Отмена</a>
+    <br>
+    <a href="/">На главную</a>
+</form>
+
+</body>
+</html>

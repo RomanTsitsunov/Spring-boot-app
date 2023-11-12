@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Питомцы</title>
+</head>
+<body>
+
+<div th:each="pet: ${pets}">
+    <span>
+        id = <span th:text="${pet.getIdPet()}"></span>:
+        <span th:text="${pet.getName()}"></span>
+        <span th:text="${pet.getVeterinars().getSurname()}"></span>
+        <span th:text="${pet.getSh().getSickname()}"></span>
+    </span>
+</div>
+<a href="pets/new">Добавить нового питомца</a>
+<br>
+<a href="/">На главную</a>
+
+</body>
+</html>

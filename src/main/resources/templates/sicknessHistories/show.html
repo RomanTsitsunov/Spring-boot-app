@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Истории болезней</title>
+</head>
+<body>
+
+<div th:each="sicknessHistory: ${sicknessHistories}">
+    <span>
+        id = <span th:text="${sicknessHistory.getIdSick()}"></span>:
+        <span th:text="${sicknessHistory.getSickname()}"></span>
+        <span th:text="${sicknessHistory.getDetectDate()}"></span>
+    </span>
+</div>
+<a href="sicknessHistories/new">Добавить новую историю болезней</a>
+<br>
+<a href="/">На главную</a>
+
+</body>
+</html>

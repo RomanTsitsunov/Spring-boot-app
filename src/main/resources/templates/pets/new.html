@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма добавления нового питомца</title>
+</head>
+<body>
+
+<form method="POST" action="/pets">
+    <label for="name">Введите имя: </label>
+    <input name="name" type="text" id="name">
+    <br>
+    <label for="idVeterinar">Введите id ветеринара: </label>
+    <input name="idVeterinar" type="text" id="idVeterinar">
+    <br>
+    <label for="idSick">Введите id истории болезней: </label>
+    <input name="idSick" type="text" id="idSick">
+    <br>
+    <input type="submit" value="Добавить"/>
+    <br>
+    <a href="/pets">Отмена</a>
+    <br>
+    <a href="/">На главную</a>
+</form>
+
+</body>
+</html>
